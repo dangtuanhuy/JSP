@@ -3,10 +3,20 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Facelet Title</title>
+        <title>TL03 - Web Service</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h4><b><i>Card Check</i></b></h4>
+        <h:form>
+        <h:panelGrid>
+            <h:outputText value="Card Number"></h:outputText>
+            <h:inputText value="#{cardVaildMB.card}" required="true" requiredMessage="Card Numvber can not null"></h:inputText>
+            <h:outputText value=""></h:outputText>
+            <h:commandButton value="Check" action="#{cardVaildMB.validCard()}"></h:commandButton>
+            <h:outputText value=""></h:outputText>
+            <h:outputText value="#{cardVaildMB.message}"></h:outputText>
+        </h:panelGrid>
+        </h:form>
     </h:body>
 </html>
 
