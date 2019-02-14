@@ -30,7 +30,15 @@ public class CardValid {
     @WebMethod(operationName = "checkCardValidation")
     public Boolean checkCardValidation(@WebParam(name = "card") String card) {
         //TODO write your implementation code here:
+        Boolean result = false;
+        //Using regular expression card
+        String regularEX
+                = "^(?:(?<visa>4[0-9]{12}(?:[0-9]{3})?)|"
+                + "(?<mastercard>5[1-5][0-9]{14})|"
+                + "(?<discover>6(?:011|5[0-9]{2})[0-9]{12})|"
+                + "(?<amex>3[47][0-9]{13})|"
+                + "(?<diners>3(?:0[0-5]|[68][0-9])?[0-9]{11}))$";
         return null;
     }
-    
+
 }
